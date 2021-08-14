@@ -1,9 +1,0 @@
-type Topic {
-  _id: String
-  title: String
-}
-
-type Query {
-  getTopics: [Topic]
-  getTopicById(id: String): Topic
-}

@@ -1,0 +1,15 @@
+type Post {
+  _id: String
+  title: String
+  author: String
+  authorId: String
+  upvote: Int
+  downvote: Int
+  score: Int
+  numComment: Int
+}
+
+type Query {
+  posts: [Post]
+  post(id: String): Post
+}

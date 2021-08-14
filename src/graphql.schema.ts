@@ -7,14 +7,21 @@
 
 /* tslint:disable */
 /* eslint-disable */
-export interface Topic {
+export class Post {
     _id?: Nullable<string>;
     title?: Nullable<string>;
+    author?: Nullable<string>;
+    authorId?: Nullable<string>;
+    upvote?: Nullable<number>;
+    downvote?: Nullable<number>;
+    score?: Nullable<number>;
+    numComment?: Nullable<number>;
 }
 
-export interface IQuery {
-    getTopics(): Nullable<Nullable<Topic>[]> | Promise<Nullable<Nullable<Topic>[]>>;
-    getTopicById(id?: Nullable<string>): Nullable<Topic> | Promise<Nullable<Topic>>;
+export abstract class IQuery {
+    abstract posts(): Nullable<Nullable<Post>[]> | Promise<Nullable<Nullable<Post>[]>>;
+
+    abstract post(id?: Nullable<string>): Nullable<Post> | Promise<Nullable<Post>>;
 }
 
 type Nullable<T> = T | null;

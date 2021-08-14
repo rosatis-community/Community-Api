@@ -5,6 +5,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { join } from 'path';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { PostModule } from './post/post.module';
 
 @Module({
   imports: [
@@ -15,9 +16,11 @@ import { AppService } from './app.service';
     GraphQLModule.forRoot({
       typePaths: ['./**/*.graphql'],
       definitions: {
-        path: join(process.cwd(), 'src/graphql.schema.ts')
+        path: join(process.cwd(), 'src/graphql.schema.ts'),
+        outputAs: 'class'
       }
     }),
+    PostModule,
   ],
   controllers: [AppController],
   providers: [AppService],
