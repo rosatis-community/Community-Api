@@ -1,3 +1,8 @@
+type BelongsTo {
+  _id: String
+  type: String
+}
+
 type Post {
   _id: String
   title: String
@@ -7,6 +12,7 @@ type Post {
   downvote: Int
   score: Int
   numComment: Int
+  belongsTo: BelongsTo
 }
 
 type Query {

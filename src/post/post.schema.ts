@@ -1,7 +1,23 @@
 import { Field, ID, Int, ObjectType } from '@nestjs/graphql';
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Schema as MongooseSchema } from 'mongoose';
+import { Community } from 'src/community/community.schema';
 import { User } from 'src/user/models/user.model';
+
+@Schema()
+export class BelongsTo {
+  @Field(() => ID)
+  @Prop({ type: MongooseSchema.Types.ObjectId, ref: Community.name })
+  id: MongooseSchema.Types.ObjectId;
+
+  @Field(() => String)
+  @Prop()
+  type: string;
+}
+
+export type BelongsToDocument = BelongsTo & Document;
+
+export const BelongsToSchema = SchemaFactory.createForClass(BelongsTo);
 
 @ObjectType()
 @Schema({ collection: 'posts' })
@@ -37,9 +53,13 @@ export class Post {
   @Prop()
   numComment: number;
 
+  @Field()
+  @Prop({ type: BelongsToSchema })
+  belongsTo: BelongsToDocument;
+
   @Field(() => Date)
   @Prop()
-  created: Date;
+  created_at: Date;
 }
 
 export type PostDocument = Post & Document;

@@ -1,0 +1,12 @@
+type Community {
+  _id: String
+  name: String
+  title: String
+  communityIcon: String
+  subscribers: Int
+}
+
+type Query {
+  communities: [Community]
+  community(name: String): Community
+}

@@ -6,6 +6,7 @@ import { join } from 'path';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { PostModule } from './post/post.module';
+import { CommunityModule } from './community/community.module';
 
 @Module({
   imports: [
@@ -21,6 +22,7 @@ import { PostModule } from './post/post.module';
       }
     }),
     PostModule,
+    CommunityModule,
   ],
   controllers: [AppController],
   providers: [AppService],
