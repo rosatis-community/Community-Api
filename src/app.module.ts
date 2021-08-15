@@ -21,6 +21,7 @@ import { UserModule } from './user/user.module';
         path: join(process.cwd(), 'src/graphql.schema.ts'),
         outputAs: 'class',
       },
+      introspection: true,
       playground: true
     }),
     PostModule,
