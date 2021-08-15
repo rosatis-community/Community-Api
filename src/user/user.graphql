@@ -4,6 +4,6 @@ type User {
 }
 
 type Query {
+  user(username: String): User
   users: [User]
-  user(name: String): User
 }

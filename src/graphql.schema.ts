@@ -24,9 +24,9 @@ export abstract class IQuery {
 
     abstract post(id?: Nullable<string>): Nullable<Post> | Promise<Nullable<Post>>;
 
-    abstract users(): Nullable<Nullable<User>[]> | Promise<Nullable<Nullable<User>[]>>;
+    abstract user(username?: Nullable<string>): Nullable<User> | Promise<Nullable<User>>;
 
-    abstract user(name?: Nullable<string>): Nullable<User> | Promise<Nullable<User>>;
+    abstract users(): Nullable<Nullable<User>[]> | Promise<Nullable<Nullable<User>[]>>;
 }
 
 export class Post {
