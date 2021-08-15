@@ -23,23 +23,26 @@ export abstract class IQuery {
     abstract posts(): Nullable<Nullable<Post>[]> | Promise<Nullable<Nullable<Post>[]>>;
 
     abstract post(id?: Nullable<string>): Nullable<Post> | Promise<Nullable<Post>>;
-}
 
-export class BelongsTo {
-    _id?: Nullable<string>;
-    type?: Nullable<string>;
+    abstract users(): Nullable<Nullable<User>[]> | Promise<Nullable<Nullable<User>[]>>;
+
+    abstract user(name?: Nullable<string>): Nullable<User> | Promise<Nullable<User>>;
 }
 
 export class Post {
     _id?: Nullable<string>;
     title?: Nullable<string>;
-    author?: Nullable<string>;
-    authorId?: Nullable<string>;
+    author?: Nullable<User>;
     upvote?: Nullable<number>;
     downvote?: Nullable<number>;
     score?: Nullable<number>;
     numComment?: Nullable<number>;
-    belongsTo?: Nullable<BelongsTo>;
+    community?: Nullable<Community>;
+}
+
+export class User {
+    _id?: Nullable<string>;
+    username?: Nullable<string>;
 }
 
 type Nullable<T> = T | null;

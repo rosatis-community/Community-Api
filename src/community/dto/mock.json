@@ -1,0 +1,27 @@
+{
+  "subreddit": {
+    "id": "t5_3lb7py",
+    "styles": {
+      "legacyIcon": null,
+      "primaryColor": "#799C54",
+      "icon": "https://styles.redditmedia.com/t5_3lb7py/styles/communityIcon_4hdl469bec661.png"
+    },
+    "name": "Kafes",
+    "subscribers": 15045.0,
+    "title": "Kafes",
+    "type": "PUBLIC",
+    "path": "/r/Kafes/",
+    "isFavorite": false,
+    "isNSFW": false,
+    "isQuarantined": false,
+    "wls": "NO_ADS",
+    "prefixedName": "r/Kafes",
+    "postFlairSettings": {
+      "position": "RIGHT",
+      "isEnabled": true
+    },
+    "isThumbnailsEnabled": true,
+    "isFreeFormReportingAllowed": true,
+    "answerableQuestions": []
+  }
+}

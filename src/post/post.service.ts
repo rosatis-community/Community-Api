@@ -12,6 +12,6 @@ export class PostService {
   }
 
   getPosts(filters: any) {
-    return this.postModel.find({ ...filters }).exec();
+    return this.postModel.find({ ...filters }).populate("author community").exec();
   }
 }

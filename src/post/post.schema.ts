@@ -2,22 +2,7 @@ import { Field, ID, Int, ObjectType } from '@nestjs/graphql';
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Schema as MongooseSchema } from 'mongoose';
 import { Community } from 'src/community/community.schema';
-import { User } from 'src/user/models/user.model';
-
-@Schema()
-export class BelongsTo {
-  @Field(() => ID)
-  @Prop({ type: MongooseSchema.Types.ObjectId, ref: Community.name })
-  id: MongooseSchema.Types.ObjectId;
-
-  @Field(() => String)
-  @Prop()
-  type: string;
-}
-
-export type BelongsToDocument = BelongsTo & Document;
-
-export const BelongsToSchema = SchemaFactory.createForClass(BelongsTo);
+import { User } from 'src/user/user.schema';
 
 @ObjectType()
 @Schema({ collection: 'posts' })
@@ -29,13 +14,9 @@ export class Post {
   @Prop()
   title: string;
 
-  @Field(() => String)
-  @Prop()
-  author: string;
-
-  @Field(() => String)
+  @Field(() => User)
   @Prop({ type: MongooseSchema.Types.ObjectId, ref: User.name })
-  authorId: MongooseSchema.Types.ObjectId;
+  author: MongooseSchema.Types.ObjectId | User;
 
   @Field(() => Int)
   @Prop()
@@ -53,9 +34,9 @@ export class Post {
   @Prop()
   numComment: number;
 
-  @Field()
-  @Prop({ type: BelongsToSchema })
-  belongsTo: BelongsToDocument;
+  @Field(() => Community)
+  @Prop({ type: MongooseSchema.Types.ObjectId, ref: Community.name })
+  community: MongooseSchema.Types.ObjectId | Community;
 
   @Field(() => Date)
   @Prop()

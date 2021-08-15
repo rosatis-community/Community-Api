@@ -10,7 +10,7 @@ export class User {
 
   @Field(() => String)
   @Prop()
-  nickname: string;
+  username: string;
 
   @Field(() => String)
   @Prop()

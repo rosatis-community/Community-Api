@@ -1,18 +1,12 @@
-type BelongsTo {
-  _id: String
-  type: String
-}
-
 type Post {
   _id: String
   title: String
-  author: String
-  authorId: String
+  author: User
   upvote: Int
   downvote: Int
   score: Int
   numComment: Int
-  belongsTo: BelongsTo
+  community: Community
 }
 
 type Query {

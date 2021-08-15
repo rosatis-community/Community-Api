@@ -1,0 +1,175 @@
+{
+  "node": {
+    "__typename": "SubredditPost",
+    "createdAt": "2021-08-14T20:09:25.178000+0000",
+    "crosspostCount": 0,
+    "crowdControlLevel": "OFF",
+    "discussionType": "COMMENT",
+    "domain": "i.redd.it",
+    "editedAt": null,
+    "flair": {
+      "richtext": "[{\"e\": \"text\", \"t\": \"Meme\"}]",
+      "text": "Meme",
+      "type": "richtext",
+      "template": {
+        "id": "596bab72-42ca-11eb-8d83-0ee965e51edf",
+        "type": "richtext",
+        "text": "Meme",
+        "richtext": "[{\"e\": \"text\", \"t\": \"Meme\"}]",
+        "textColor": "LIGHT",
+        "backgroundColor": "#349E48",
+        "isEditable": false,
+        "isModOnly": false,
+        "cssClass": ""
+      }
+    },
+    "awardings": [],
+    "id": "t3_p4f5bz",
+    "isArchived": false,
+    "isCreatedFromAdsUi": false,
+    "isContestMode": false,
+    "isHidden": false,
+    "isLocked": false,
+    "isNsfw": false,
+    "isOriginalContent": false,
+    "isSaved": false,
+    "isScoreHidden": true,
+    "isSelfPost": false,
+    "isSpoiler": false,
+    "isStickied": false,
+    "isTrackingCrossposts": false,
+    "isVisited": false,
+    "liveCommentsWebsocket": "wss://ws-0c2fc51946b39365a.wss.redditmedia.com/link/p4f5bz?m=AQAAmYsZYYaqBQrYosWmycGuXkJccsns3HVxKtnzSrpG_iDlaoXK",
+    "moderationInfo": null,
+    "outboundLink": {
+      "expiresAt": "2021-08-14T22:48:08.596000+0000",
+      "url": "https://i.redd.it/0pgyl3kvrdh71.jpg"
+    },
+    "permalink": "/r/Kafes/comments/p4f5bz/ye\u011fenim_\u015fu_defterden_t\u00fcp\u00e7\u00fcn\u00fcn_numaras\u0131n\u0131_bulsana/",
+    "removedBy": null,
+    "removedByCategory": null,
+    "topAwardedType": null,
+    "score": null,
+    "suggestedCommentSort": null,
+    "title": "Ye\u011fenim \u015fu defterden t\u00fcp\u00e7\u00fcn\u00fcn numaras\u0131n\u0131 bulsana\ud83e\udd14",
+    "url": "https://i.redd.it/0pgyl3kvrdh71.jpg",
+    "whitelistStatus": "NO_ADS",
+    "voteState": "NONE",
+    "authorFlair": null,
+    "authorInfo": {
+      "__typename": "Redditor",
+      "id": "t2_9e7ccaxg",
+      "name": "DurmazAbi",
+      "isPremiumMember": false
+    },
+    "authorOnlyInfo": null,
+    "commentCount": 1.0,
+    "content": null,
+    "distinguishedAs": null,
+    "gallery": null,
+    "isCrosspostable": true,
+    "isFollowed": false,
+    "isGildable": true,
+    "isMediaOnly": false,
+    "isPollIncluded": false,
+    "media": {
+      "typeHint": "IMAGE",
+      "still": {
+        "source": {
+          "url": "https://preview.redd.it/0pgyl3kvrdh71.jpg?auto=webp&s=61a2a09e0d849f31b2928da42e446b2953b9b215",
+          "dimensions": {
+            "width": 1242,
+            "height": 2208
+          }
+        },
+        "small": {
+          "url": "https://preview.redd.it/0pgyl3kvrdh71.jpg?width=108&height=192&crop=smart&auto=webp&s=cf11ad5e9e829356e2e1ca81d85f915a4f1c2cb8",
+          "dimensions": {
+            "width": 108,
+            "height": 192
+          }
+        },
+        "medium": {
+          "url": "https://preview.redd.it/0pgyl3kvrdh71.jpg?width=216&height=384&crop=smart&auto=webp&s=2fa4b8f2de9736df72316536a4a9e57a909d89d5",
+          "dimensions": {
+            "width": 216,
+            "height": 384
+          }
+        },
+        "large": {
+          "url": "https://preview.redd.it/0pgyl3kvrdh71.jpg?width=320&height=568&crop=smart&auto=webp&s=957da39da92f7777826769179cd3ca1f1ab69240",
+          "dimensions": {
+            "width": 320,
+            "height": 568
+          }
+        },
+        "xlarge": {
+          "url": "https://preview.redd.it/0pgyl3kvrdh71.jpg?width=640&height=1137&crop=smart&auto=webp&s=0d77df919d9ffc4ca703f12687b3c7db96de8177",
+          "dimensions": {
+            "width": 640,
+            "height": 1137
+          }
+        },
+        "xxlarge": {
+          "url": "https://preview.redd.it/0pgyl3kvrdh71.jpg?width=960&height=1706&crop=smart&auto=webp&s=6c45ce4f420475f666167628ddf2c39f26c27e57",
+          "dimensions": {
+            "width": 960,
+            "height": 1706
+          }
+        },
+        "xxxlarge": {
+          "url": "https://preview.redd.it/0pgyl3kvrdh71.jpg?width=1080&height=1920&crop=smart&auto=webp&s=63631c22577cb8dfd4554ce174c739ebcb86aaaf",
+          "dimensions": {
+            "width": 1080,
+            "height": 1920
+          }
+        }
+      },
+      "obfuscatedStill": {
+        "source": null
+      },
+      "animated": null,
+      "streaming": null,
+      "video": null,
+      "RPAN": null
+    },
+    "postEventInfo": null,
+    "thumbnail": {
+      "url": "https://b.thumbs.redditmedia.com/8_BDtfUfSpcXHT52QbhVjtqIutZJ2izMFsG7w8zBe8c.jpg",
+      "dimensions": {
+        "width": 140,
+        "height": 140
+      }
+    },
+    "upvoteRatio": 1.0,
+    "viewCount": null,
+    "poll": null,
+    "subreddit": {
+      "id": "t5_3lb7py",
+      "styles": {
+        "legacyIcon": null,
+        "primaryColor": "#799C54",
+        "icon": "https://styles.redditmedia.com/t5_3lb7py/styles/communityIcon_4hdl469bec661.png"
+      },
+      "name": "Kafes",
+      "subscribers": 15045.0,
+      "title": "Kafes",
+      "type": "PUBLIC",
+      "path": "/r/Kafes/",
+      "isFavorite": false,
+      "isNSFW": false,
+      "isQuarantined": false,
+      "wls": "NO_ADS",
+      "prefixedName": "r/Kafes",
+      "postFlairSettings": {
+        "position": "RIGHT",
+        "isEnabled": true
+      },
+      "isThumbnailsEnabled": true,
+      "isFreeFormReportingAllowed": true,
+      "answerableQuestions": []
+    },
+    "predictionTournament": null,
+    "crosspostRoot": null
+  }
+}
