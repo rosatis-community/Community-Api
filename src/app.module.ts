@@ -5,8 +5,8 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { join } from 'path';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { PostModule } from './post/post.module';
 import { CommunityModule } from './community/community.module';
+import { PostModule } from './post/post.module';
 import { UserModule } from './user/user.module';
 
 @Module({
@@ -19,8 +19,9 @@ import { UserModule } from './user/user.module';
       typePaths: ['./**/*.graphql'],
       definitions: {
         path: join(process.cwd(), 'src/graphql.schema.ts'),
-        outputAs: 'class'
-      }
+        outputAs: 'class',
+      },
+      playground: true
     }),
     PostModule,
     CommunityModule,
