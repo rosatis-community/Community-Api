@@ -6,7 +6,17 @@ type Community {
   subscribers: Int
 }
 
+input CreateCommunityInput {
+  name: String!
+  communityIcon: String
+}
+
 type Query {
-  communities: [Community]
   community(name: String): Community
+  communities: [Community]
+  searchCommunities(term: String): [Community]
+}
+
+type Mutation {
+  createCommunity(payload: CreateCommunityInput): Community
 }

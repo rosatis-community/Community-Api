@@ -14,7 +14,7 @@ import { UserModule } from './user/user.module';
     ConfigModule.forRoot({
       envFilePath: '.env',
     }),
-    MongooseModule.forRoot(process.env.DATABASE_URL, { useNewUrlParser: true }),
+    MongooseModule.forRoot(process.env.DATABASE_URL, { useNewUrlParser: true, useFindAndModify: false, useCreateIndex: true }),
     GraphQLModule.forRoot({
       typePaths: ['./**/*.graphql'],
       definitions: {

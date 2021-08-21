@@ -3,17 +3,17 @@ import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Schema as MongooseSchema } from 'mongoose';
 
 @ObjectType()
-@Schema({ collection: 'communities' })
+@Schema({ collection: 'communities', versionKey: false })
 export class Community {
   @Field(() => ID)
   _id: MongooseSchema.Types.ObjectId;
 
   @Field(() => String)
-  @Prop()
+  @Prop({ unique: true, index: 'text' })
   name: string;
 
   @Field(() => String)
-  @Prop()
+  @Prop({ index: 'text' })
   title: string;
 
   @Field(() => String)
@@ -21,7 +21,7 @@ export class Community {
   communityIcon: string;
 
   @Field(() => Int)
-  @Prop()
+  @Prop({ default: 0 })
   subscribers: number;
 }
 
