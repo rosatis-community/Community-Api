@@ -4,6 +4,7 @@ type Community {
   title: String
   communityIcon: String
   subscribers: Int
+  posts: [Post]
 }
 
 input CreateCommunityInput {
@@ -15,6 +16,7 @@ type Query {
   community(name: String): Community
   communities: [Community]
   searchCommunities(term: String): [Community]
+  communityPosts(name: String): [Post]
 }
 
 type Mutation {

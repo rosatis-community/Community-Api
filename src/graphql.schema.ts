@@ -18,6 +18,7 @@ export class Community {
     title?: Nullable<string>;
     communityIcon?: Nullable<string>;
     subscribers?: Nullable<number>;
+    posts?: Nullable<Nullable<Post>[]>;
 }
 
 export abstract class IQuery {
@@ -26,6 +27,8 @@ export abstract class IQuery {
     abstract communities(): Nullable<Nullable<Community>[]> | Promise<Nullable<Nullable<Community>[]>>;
 
     abstract searchCommunities(term?: Nullable<string>): Nullable<Nullable<Community>[]> | Promise<Nullable<Nullable<Community>[]>>;
+
+    abstract communityPosts(name?: Nullable<string>): Nullable<Nullable<Post>[]> | Promise<Nullable<Nullable<Post>[]>>;
 
     abstract posts(): Nullable<Nullable<Post>[]> | Promise<Nullable<Nullable<Post>[]>>;
 

@@ -1,5 +1,6 @@
 
 import { Args, Mutation, Query, Resolver } from '@nestjs/graphql';
+import { Post } from 'src/post/post.schema';
 import { CreateCommunityInput } from './community.input';
 import { Community } from './community.schema';
 import { CommunityService } from './community.service';
@@ -10,7 +11,12 @@ export class CommunityResolver {
 
   @Query(() => Community)
   async community(@Args('name', { type: () => String }) name: string) {
-    return this.communityService.getCommunityByName(name);
+    return this.communityService.getCommunity(name);
+  }
+
+  @Query(() => Post)
+  async communityPosts(@Args('name', { type: () => String }) name: string) {
+    return this.communityService.getCommunityPosts(name);
   }
 
   @Query(() => [Community])

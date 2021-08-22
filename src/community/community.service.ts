@@ -13,8 +13,23 @@ export class CommunityService {
     return await createdCommunity.save();
   }
 
-  async getCommunityByName(name: string) {
+  async getCommunity(name: string) {
     return await this.communityModel.findOne({ name }).exec();
+  }
+
+  async getCommunityPosts(name: string) {
+    const query = await this.communityModel.findOne({ name })
+      .populate({
+        path: 'posts',
+        model: 'Post',
+        populate: {
+          path: 'author',
+          model: 'User'
+        }
+      })
+      .exec();
+
+    return query.posts;
   }
 
   async getCommunities(filters: any) {

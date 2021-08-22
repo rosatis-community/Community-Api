@@ -35,7 +35,7 @@ export class Post {
   numComment: number;
 
   @Field(() => Community)
-  @Prop({ type: MongooseSchema.Types.ObjectId, ref: Community.name })
+  @Prop({ type: MongooseSchema.Types.ObjectId, ref: 'Community' })
   community: MongooseSchema.Types.ObjectId | Community;
 
   @Field(() => Date)
