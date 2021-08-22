@@ -22,6 +22,7 @@ export class CommunityService {
   }
 
   async searchCommunities(term: string) {
+    if (!term) throw new Error('hata');
     return await this.communityModel.find({
       $or: [
         { name: { $regex: term, $options: "i" } },
