@@ -14,7 +14,7 @@ export class CommunityResolver {
     return this.communityService.getCommunity(name);
   }
 
-  @Query(() => Post)
+  @Query(() => [Post])
   async communityPosts(@Args('name', { type: () => String }) name: string) {
     return this.communityService.getCommunityPosts(name);
   }

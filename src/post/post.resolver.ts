@@ -9,8 +9,8 @@ export class PostResolver {
   constructor(private postService: PostService) { }
 
   @Query(() => Post)
-  async post(@Args('_id', { type: () => String }) _id: MongooseSchema.Types.ObjectId) {
-    return this.postService.getPostById(_id);
+  async post(@Args('id', { type: () => String }) id: MongooseSchema.Types.ObjectId) {
+    return this.postService.getPost(id);
   }
 
   @Query(() => [Post])

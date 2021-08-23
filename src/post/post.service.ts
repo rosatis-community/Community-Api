@@ -7,8 +7,8 @@ import { Post, PostDocument } from './post.schema';
 export class PostService {
   constructor(@InjectModel(Post.name) private postModel: Model<PostDocument>) { }
 
-  getPostById(_id: MongooseSchema.Types.ObjectId) {
-    return this.postModel.findById(_id).exec();
+  getPost(id: MongooseSchema.Types.ObjectId) {
+    return this.postModel.findById(id).exec();
   }
 
   getPosts(filters: any) {
