@@ -8,7 +8,7 @@ export class PostService {
   constructor(@InjectModel(Post.name) private postModel: Model<PostDocument>) { }
 
   getPost(id: MongooseSchema.Types.ObjectId) {
-    return this.postModel.findById(id).exec();
+    return this.postModel.findById(id).populate("author community").exec();
   }
 
   getPosts(filters: any) {
